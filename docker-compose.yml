@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    image: ai-learning-assistant
+    build:
+      context: .
+    ports:
+      - "5000:50505"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ASTRA_DB_API_ENDPOINT: ${ASTRA_DB_API_ENDPOINT}
+      ASTRA_DB_APPLICATION_TOKEN: ${ASTRA_DB_APPLICATION_TOKEN}
