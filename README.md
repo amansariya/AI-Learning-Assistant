@@ -1,1 +1,1 @@
-# Retrieval Augmented Generation (RAG) AI Learning Assistan
+# Retrieval Augmented Generation (RAG) AI Learning Assistant
