@@ -5,6 +5,21 @@ from langflow.load import run_flow_from_json
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
+TWEAKS = {
+  "ChatInput-PIbxE": {},
+  "AstraVectorStoreComponent-3wF9y": {},
+  "ParseData-b1pCb": {},
+  "Prompt-mY768": {},
+  "ChatOutput-tNmf1": {},
+  "SplitText-b4YP5": {},
+  "File-hzYXz": {},
+  "AstraVectorStoreComponent-6yQOg": {},
+  "OpenAIEmbeddings-ptVaH": {},
+  "OpenAIEmbeddings-y9dEH": {},
+  "OpenAIModel-Qe5KX": {},
+  "ConversationChain-sOivX": {}
+}
+
 def chat(history, message):
     if history is None:
         history = []
