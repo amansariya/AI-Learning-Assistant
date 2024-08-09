@@ -2,8 +2,6 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 import gradio as gr
 from langflow.load import run_flow_from_json
-from fastapi.middleware.cors import CORSMiddleware
-import os
 
 TWEAKS = {
   "ChatInput-PIbxE": {},
@@ -45,15 +43,6 @@ def chat(history, message):
 # Initialize FastAPI app
 app = FastAPI()
 
-# Configure CORS middleware (optional, depending on your needs)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
-    allow_credentials=True,
-    allow_methods=["*"],  # Allow all methods
-    allow_headers=["*"],  # Allow all headers
-)
-
 # Initialize Gradio app
 with gr.Blocks() as demo:
     chatbot = gr.Chatbot()
@@ -76,7 +65,6 @@ def root():
     # Redirect to the Gradio interface
     return RedirectResponse(url="/gradio")
 
-# Run the app using Uvicorn
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=7860)
