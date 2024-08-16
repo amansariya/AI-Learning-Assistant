@@ -20,6 +20,8 @@ The application is designed with a modular architecture, combining FastAPI, Grad
 - **Docker**: Containerizes the entire application, ensuring consistency across different deployment environments.
 - **Microsoft Azure**: Uses Container Registry and App Service to host the web application.
 
+![alt text](https://github.com/amansariya/FastAPI-Gradio-Langflow-RAG-App/blob/main/RAG%20Flowchart.jpg)
+
 ## Installation and Setup
 
 ### Prerequisites
