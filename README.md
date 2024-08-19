@@ -6,7 +6,7 @@
 ### Key Features:
 - **Interactive chat interface** powered by Gradio
 - **FastAPI backend** for routing and application management
-- **LangFlow integration** for sophisticated AI responses
+- **LangFlow integration** to handle embedding quries for Astra DB and RAG pipeline
 - **Dockerized setup** with a configurable Gunicorn server
 
 ## Architecture Overview
